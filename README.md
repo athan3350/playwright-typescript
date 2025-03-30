@@ -31,6 +31,9 @@ This project leverages modern web technologies and best practices in test automa
     - [Rendering of Posts in the Subreddit](#rendering-of-posts-in-the-subreddit)
     - [Shadowroots Management](#shadowroots-management)
   - [Next Steps and Improvements](#next-steps-and-improvements)
+  - [Security Concern: Plaintext Credentials in Reddit Login](#security-concern-plaintext-credentials-in-reddit-login)  
+    - [🔎 Why is this critical?](#-why-is-this-critical)  
+    - [📷 Evidence](#-evidence)  
 
 
 ## Getting Started With The Project
@@ -58,6 +61,17 @@ This section outlines the initial setup process to clone, configure, and run the
 ## Available Scripts
 
 These scripts allow you to run different configurations of tests using Playwright. Depending on your needs, you can choose the browser and mode (headless or headed), run tests in parallel, or generate a detailed report.
+
+### 📹 Video Tutorial: [How to Run the Test Automation Project](https://www.youtube.com/watch?v=TNSQ-tGd8h4)
+
+This video provides a step-by-step example of how to execute the test automation project.
+
+[![How to Run the Test Automation Project](https://img.youtube.com/vi/TNSQ-tGd8h4/maxresdefault.jpg)](https://www.youtube.com/watch?v=TNSQ-tGd8h4)
+
+🔹 **Duration**: 1.30 min
+
+
+
 
 | Command                           | Description                                                                                       |
 |-----------------------------------|---------------------------------------------------------------------------------------------------|
@@ -188,6 +202,19 @@ This section outlines the next steps and planned enhancements to expand test cov
 
 - **Additional E2E Flows:**  
   Incorporate more end-to-end (E2E) test flows to increase coverage, addressing additional use cases and user scenarios.
+
+## Security Concern: Plaintext Credentials in Reddit Login  
+
+During testing, was discovered that Reddit's login **transmits the username and password in plaintext**. This means anyone with access to the browser’s **network logs** could retrieve these credentials, posing a serious security risk.  
+
+### 🔎 **Why is this critical?**  
+- Exposes user credentials to potential attackers.  
+- Compromises privacy and security, especially on shared or public networks.  
+- Violates best practices for secure authentication.  
+
+📷 **Evidence:**  
+
+![Security Issue - Reddit Login](./resources/security_finding.png) 
 
 ---
 > Authors:  
