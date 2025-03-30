@@ -78,7 +78,10 @@ export class SubredditPage {
     const articles = await this.getAllArticles();
     const titles = await this.getTitles();
     console.log("tittles...", titles);
-    await FileUtils.generateTitlesLog(screenshotsFolder, titles);
+    
+    await FileUtils.generateTitlesLog(screenshotsFolder, titles.filter(title =>
+      title.toLowerCase().includes(testCaseValue.toLowerCase())))
+
     for (const [index, title] of titles.entries()) {
       if (!title.toLowerCase().includes(testCaseValue.toLowerCase())) continue;
 
