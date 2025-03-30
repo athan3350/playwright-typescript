@@ -192,4 +192,4 @@ This section outlines the next steps and planned enhancements to expand test cov
 ---
 > Authors:  
 > **Sebastian Suarez**
-> That's it, I hope you like it  🐶:metal:
+> That's it, I hope you like it  🐶🤘
