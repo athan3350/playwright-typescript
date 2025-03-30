@@ -1,0 +1,21 @@
+{
+  "name": "qa-automation-reddit-sebastian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.13"
+  },
+  "dependencies": {
+    "2captcha": "^3.0.5-2",
+    "fs-extra": "^11.3.0",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^0.0.1"
+  }
+}
