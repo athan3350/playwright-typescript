@@ -54,6 +54,11 @@ This section outlines the initial setup process to clone, configure, and run the
    ```bash
    npm install
    ```
+4. **change credentials**
+  
+   ```bash
+   Go to .env file and change the Login credentials
+   ```
 
 4. **Run the Tests**
    Refer to the [Available Scripts](#available-scripts) section for more details.
