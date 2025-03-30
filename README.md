@@ -12,6 +12,25 @@ Key features of the project include:
 
 This project leverages modern web technologies and best practices in test automation to ensure high quality and reliability of web applications.
 
+## Table of Contents
+
+- [🚀 Project Overview ✨](#-project-overview-)
+- [Getting Started With The Project](#getting-started-with-the-project)
+- [Available Scripts](#available-scripts)
+- [Available Parameters](#available-parameters)
+- [The project directory structure](#the-project-directory-structure)
+- [Test Plan](#test-plan)
+  - [Scope](#scope)
+  - [Test Cases](#test-cases)
+    - [Preconditions](#preconditions)
+    - [Test Steps (Happy Path)](#test-steps-happy-path)
+    - [Postconditions](#postconditions)
+    - [Technical Aspects](#technical-aspects)
+  - [Challenges and Learnings](#challenges-and-learnings)
+    - [Bot Detection](#bot-detection)
+    - [Rendering of Posts in the Subreddit](#rendering-of-posts-in-the-subreddit)
+    - [Shadowroots Management](#shadowroots-management)
+  - [Next Steps and Improvements](#next-steps-and-improvements)
 
 
 ## Getting Started With The Project
