@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "cross-env TEST_CASE=HAPPY_PATH npx playwright test",
     "test:chrome:headless": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --project=Chrome",
     "test:chrome:headed": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=Chrome",
     "test:chrome:debug": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=Chrome --debug",
