@@ -214,7 +214,7 @@ During testing, was discovered that Reddit's login **transmits the username and 
 
 📷 **Evidence:**  
 
-![Security Issue - Reddit Login](./resources/security_finding.png) 
+![Security Issue - Reddit Login](https://github.com/athan3350/playwright-typescript/blob/main/resources/security_finding.PNG) 
 
 ---
 > Authors:  
