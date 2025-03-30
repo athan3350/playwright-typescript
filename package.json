@@ -4,16 +4,28 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "test": "cross-env TEST_CASE=HAPPY_PATH npx playwright test",
+    "test:chrome:headless": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --project=Chrome",
+    "test:chrome:headed": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=Chrome",
+    "test:chrome:debug": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=Chrome --debug",
+    "test:firefox:headless": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --project=Firefox",
+    "test:firefox:headed": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=Firefox",
+    "test:webkit:headless": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --project=WebKit",
+    "test:webkit:headed": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --project=WebKit",
+    "test:parallel:headless": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --workers=\"75%\"",
+    "test:parallel:headed": "cross-env TEST_CASE=HAPPY_PATH npx playwright test --headed --workers=\"75%\"",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.13"
+    "@types/node": "^22.13.13",
+    "cross-env": "^7.0.3"
   },
   "dependencies": {
-    "2captcha": "^3.0.5-2",
     "fs-extra": "^11.3.0",
     "playwright-extra": "^4.3.6",
     "playwright-extra-plugin-stealth": "^0.0.1"

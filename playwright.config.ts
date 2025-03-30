@@ -4,16 +4,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-  timeout: 5 * 60 * 1000, // ⏳ 5 minutos por test
+  timeout: 5 * 60 * 1000,
   expect: {
-    timeout: 10 * 1000, // ⏳ Timeout en aserciones (10s)
+    timeout: 10 * 1000,
   },
   fullyParallel: true,
   workers: process.env.CI ? 2 : undefined,
-
-  // Configuración global que se aplicará a todos los proyectos
   use: {
-    headless: false,
+    headless: true,
     ignoreHTTPSErrors: true,
     viewport: { width: 1920, height: 1080 },
     permissions: ['notifications'],
@@ -22,7 +20,6 @@ export default defineConfig({
     trace: 'on',
     video: 'retain-on-failure',
   },
-
   projects: [
     {
       name: 'Chrome',
@@ -62,7 +59,7 @@ export default defineConfig({
       use: {
         browserName: 'firefox',
         launchOptions: {
-          args: [] // O agrega únicamente flags compatibles con Firefox si fuera necesario
+          args: []
         },
       },
     },
@@ -71,11 +68,10 @@ export default defineConfig({
       use: {
         browserName: 'webkit',
         launchOptions: {
-          args: [] // WebKit no requiere estos flags
+          args: []
         },
       },
     }
   ],
-
   reporter: [['html', { outputFolder: 'playwright-report', open: 'never' }]],
 });
